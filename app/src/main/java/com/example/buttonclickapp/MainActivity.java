@@ -30,6 +30,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
         userInput = (EditText) findViewById(R.id.editTextText);
+        userInput.setText("");
         Button button = (Button) findViewById(R.id.button);
         textView = (TextView) findViewById(R.id.textView);
         textView.setText("");
@@ -40,6 +41,7 @@ public class MainActivity extends AppCompatActivity {
                 String result = userInput.getText().toString();
                 result = result + "\n";
                 textView.append(result);
+                userInput.setText("");
             }
         };
         if(button != null) {
